@@ -1,0 +1,37 @@
+body {
+  background-color: rgb(38, 35, 65);
+  margin: 0;
+}
+header {
+  padding: 0px 0px 100px 0px;
+}
+.menu {
+  background-color: rgba(255, 255, 255, 0.128);
+  width: 80%;
+  height: 1200px;
+  margin: auto;
+  border: none;
+  border-radius: 60px;
+  display: flex;
+}
+.menu-item {
+  background-color: #0000005c;
+  height: 800px;
+  width: 33%;
+  border: 2px solid #a5d5ff;
+  border-radius: 60px;
+}
+.title-card {
+  text-align: center;
+  color: white;
+  margin: 10px 0px;
+  border-bottom: 2px solid #a5d5ff;
+  padding-bottom: 10px;
+}
+.title {
+  font-size: 24px;
+  margin: 0;
+}
+.cost {
+  margin: 0;
+}
