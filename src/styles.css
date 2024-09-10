@@ -16,8 +16,30 @@ header {
 }
 footer {
   height: 400px;
-  background-color: #100f1c;
+  background-color: #222;
   width: 100%;
+}
+#home-wrapper {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 100px 230px;
+}
+.home-title {
+  font-size: 44px;
+  margin: 0px;
+}
+#home-img-wrapper {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  margin: 100px 0px 0px 0px;
+}
+.home-img {
+  margin: 0px 20px 0px 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px #0000003b;
+  max-width: 512px;
 }
 .header-btn {
   width: 120px;
@@ -43,6 +65,7 @@ footer {
   top: 0;
   left: 0;
   max-width: -moz-available;
+  height: 1050px;
 }
 
 .item {
@@ -90,18 +113,6 @@ footer {
   text-align: center;
   margin: 10px 0px;
   padding-bottom: 10px;
-}
-.home-images {
-  display: flex;
-  height: 300px;
-  justify-content: center;
-}
-.home-banner {
-}
-.home-img {
-  margin: 0px 20px 0px 20px;
-  border-radius: 20px;
-  box-shadow: 10px 10px #0000003b;
 }
 #title {
   font-size: 24px;

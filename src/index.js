@@ -1,5 +1,6 @@
 import "./styles.css";
 import { drawMenu } from "./menu.js";
+import { drawHome } from "./home.js";
 const buttons = document.getElementsByClassName("header-btn");
 for (let i = 0; i < buttons.length; i++) {
   const element = buttons[i];
@@ -9,12 +10,19 @@ function unloadContent() {
   if (document.getElementById("menu-wrapper")) {
     const element = document.getElementById("menu-wrapper");
     element.remove();
+  } else if (document.getElementById("home-wrapper")) {
+    const element = document.getElementById("home-wrapper");
+    element.remove();
   }
 }
+//Draws homescreen on load.
+drawHome();
+
 function loadContent(button) {
   switch (button) {
     case "home":
       unloadContent();
+      drawHome();
       break;
     case "menu":
       unloadContent();
