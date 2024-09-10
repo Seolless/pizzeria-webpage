@@ -2,21 +2,9 @@ import products from "./prices.js";
 
 export function drawMenu() {
   const menu = document.createElement("div");
-  menu.id = "menu-card";
+  menu.id = "menu-wrapper";
   document.getElementById("content").appendChild(menu);
 
-  const menuItem = document.createElement("div");
-  menuItem.id = "menu-item";
-  document.getElementById("menu-card").appendChild(menuItem);
-
-  const titleCard = document.createElement("div");
-  titleCard.id = "title-card";
-  document.getElementById("menu-item").appendChild(titleCard);
-
-  const title = document.createElement("p");
-  title.id = "title";
-  title.innerText = "Priskategori 1";
-  document.getElementById("title-card").appendChild(title);
   /* I might use for some other info later.
   const cost = document.createElement("p");
   cost.id = "cost";
@@ -25,11 +13,32 @@ export function drawMenu() {
 */
   for (let i = 0; i < products.length; i++) {
     const element = products[i];
+    if (!document.getElementById(element.category)) {
+      const menuCard = document.createElement("div");
+      menuCard.id = element.category;
+      menuCard.className = "menu-card";
+      document.getElementById("menu-wrapper").appendChild(menuCard);
 
+      const titleCard = document.createElement("div");
+      titleCard.id = `${element.category}-title`;
+      titleCard.className = "title-card";
+      document.getElementById(element.category).appendChild(titleCard);
+
+      const title = document.createElement("p");
+      title.id = "title";
+      title.innerText = element.category;
+      document.getElementById(`${element.category}-title`).appendChild(title);
+
+      createItem(element, i);
+    } else {
+      createItem(element, i);
+    }
+  }
+  function createItem(element, i) {
     const item = document.createElement("div");
     item.id = `item${i}`;
     item.className = "item";
-    document.getElementById("menu-item").appendChild(item);
+    document.getElementById(element.category).appendChild(item);
 
     const itemWrapper = document.createElement("div");
     itemWrapper.id = `item-wrapper${i}`;

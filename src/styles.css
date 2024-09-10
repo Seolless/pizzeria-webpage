@@ -1,16 +1,56 @@
 body {
-  background-color: rgb(38, 35, 65);
   margin: 0;
   color: white;
+  background-color: #ffffff;
 }
 header {
-  padding: 0px 0px 100px 0px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  padding: 0px 250px;
+  margin: auto;
+  backdrop-filter: blur(3px);
+  background-color: #ffffffb2;
+  z-index: 80;
 }
+footer {
+  height: 400px;
+  background-color: #100f1c;
+  width: 100%;
+}
+.header-btn {
+  width: 120px;
+  height: 40px;
+  margin: 0px 10px;
+  background: none;
+  border: none;
+  color: #3a2323;
+  font-size: 24px;
+}
+.number {
+  color: #3a2323;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+.logo {
+  height: 60px;
+}
+.background-img {
+  filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: -moz-available;
+}
+
 .item {
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 4px -4px #00000012;
 }
 .item-name {
   margin: 0px;
@@ -28,27 +68,40 @@ header {
 .item-name-wrapper {
   display: flex;
 }
-#menu-card {
-  background-color: rgba(255, 255, 255, 0.128);
-  width: 80%;
+#menu-wrapper {
+  background-color: rgba(255, 255, 255, 0);
+  width: 1200px;
   height: 1200px;
   margin: auto;
   border: none;
   border-radius: 60px;
   display: flex;
 }
-#menu-item {
-  background-color: #0000005c;
+.menu-card {
+  background-color: #262322;
   height: 800px;
   width: 33%;
-  border: 2px solid #a5d5ff;
-  border-radius: 60px;
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 6px 5px #0000005c;
+  z-index: 1;
 }
-#title-card {
+.title-card {
   text-align: center;
   margin: 10px 0px;
-  border-bottom: 2px solid #a5d5ff;
   padding-bottom: 10px;
+}
+.home-images {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
+.home-banner {
+}
+.home-img {
+  margin: 0px 20px 0px 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px #0000003b;
 }
 #title {
   font-size: 24px;
@@ -56,4 +109,16 @@ header {
 }
 #cost {
   margin: 0;
+}
+#content {
+  height: 900px;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+}
+#home:hover,
+#menu:hover,
+#about:hover {
+  background-color: rgba(0, 0, 0, 0.105);
+  cursor: pointer;
+  border-radius: 10px;
 }
