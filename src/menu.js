@@ -5,12 +5,6 @@ export function drawMenu() {
   menu.id = "menu-wrapper";
   document.getElementById("content").appendChild(menu);
 
-  /* I might use for some other info later.
-  const cost = document.createElement("p");
-  cost.id = "cost";
-  cost.innerText = "80kr - Familje: 185kr";
-  document.getElementById("title-card").appendChild(cost);
-*/
   for (let i = 0; i < products.length; i++) {
     const element = products[i];
     if (!document.getElementById(element.category)) {

@@ -1,6 +1,7 @@
 import "./styles.css";
 import { drawMenu } from "./menu.js";
 import { drawHome } from "./home.js";
+import { drawAbout } from "./about.js";
 const buttons = document.getElementsByClassName("header-btn");
 for (let i = 0; i < buttons.length; i++) {
   const element = buttons[i];
@@ -12,6 +13,9 @@ function unloadContent() {
     element.remove();
   } else if (document.getElementById("home-wrapper")) {
     const element = document.getElementById("home-wrapper");
+    element.remove();
+  } else if (document.getElementById("about-wrapper")) {
+    const element = document.getElementById("about-wrapper");
     element.remove();
   }
 }
@@ -30,6 +34,7 @@ function loadContent(button) {
       break;
     case "about":
       unloadContent();
+      drawAbout();
       break;
     default:
       console.log("Error. Button ID Not Found.");

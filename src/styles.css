@@ -102,7 +102,7 @@ footer {
 }
 .menu-card {
   background-color: #262322;
-  height: 800px;
+  height: 760px;
   width: 33%;
   border-top: 3px solid #ffffff;
   border-bottom: 3px solid #ffffff;
@@ -132,4 +132,24 @@ footer {
   background-color: rgba(0, 0, 0, 0.105);
   cursor: pointer;
   border-radius: 10px;
+}
+#about-wrapper {
+  position: relative;
+  margin: 100px 350px;
+  background-color: #262322;
+  padding: 10px;
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  box-shadow: 6px 5px #0000005c;
+}
+.about-title {
+  font-size: 26px;
+  margin: 10px 0px;
+  text-align: center;
+}
+.about-text {
+  font-size: 18px;
+  margin: 40px 20px;
+  box-shadow: 0px -4px #00000012;
+  padding: 10px;
 }
